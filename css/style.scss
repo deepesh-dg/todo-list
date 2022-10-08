@@ -1,0 +1,236 @@
+$min-sm : '576px';
+$min-md : '768px';
+$min-lg : '992px';
+$min-xl : '1200px';
+
+@mixin min-sm {
+    @media (min-width: $min-sm) {
+        @content;
+    }
+}
+
+@mixin min-md {
+    @media (min-width: $min-md) {
+        @content;
+    }
+}
+
+@mixin min-lg {
+    @media (min-width: $min-lg) {
+        @content;
+    }
+}
+
+@mixin min-xl {
+    @media (min-width: $min-xl) {
+        @content;
+    }
+}
+
+body{
+    background-color: #89adb5;
+}
+
+#todo-container{
+    .container{
+        @include min-sm{
+            max-width: 450px;
+        }
+    }
+
+    .list-container {
+        margin: 40px auto;
+        background: linear-gradient(135deg, rgba(158, 15, 184, 0.7) -10%, rgba(5, 232, 255, 0.8) 180%), url(https://static.vecteezy.com/system/resources/previews/000/101/253/non_2x/vector-free-abstract-background-1.jpg);
+        background-size: cover;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 25px;
+
+        .title{
+            padding: 30px 0;
+        }
+        
+        .form-control{
+            &:focus{
+                box-shadow: none;
+                border-color: #ced4da;
+            }
+        }
+        
+        #add-list{
+
+            .form-row{
+                position: relative;
+
+                .submit-btn{
+                    position: absolute;
+                    right: 15px;
+                    top: 9px;
+
+                    button{
+                        border-radius: 25px;
+
+                        &:focus{
+                            box-shadow: none;
+                        }
+                    }
+                }
+
+                input{
+                    // border-radius: 28px;
+                    padding-right: 110px;
+                    height: 56px;
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+                    
+                }
+            }
+        }
+
+        #created-list {
+            padding: 0px;
+
+            li {
+                padding: 10px 40px;
+                color: #000;
+                word-break: break-all;
+                position: relative;
+                cursor: pointer;
+                margin: 10px 0;
+                padding-right: 80px;
+                background-color: white;
+                border-bottom: none;
+                transition: all 300ms ease;
+
+                &:hover{
+                    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+                    transform: scale(1.01);
+                    z-index: 1;
+                }
+
+                *{
+                    cursor: pointer;
+                }
+
+                &:nth-child(odd){
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: -1px;
+                        width: 5px;
+                        background-color:#53AF50;
+                    }
+                }
+
+                &:nth-child(even){
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: -1px;
+                        width: 5px;
+                        background-color:#F3C623;
+                    }
+                }
+
+                .fa-check-circle{
+                    color: #744bc0;
+                }
+
+                #list-strike {
+                    position: absolute;
+                    top: 23px;
+                    left: 15px;
+                }
+
+                label{
+                    margin:0 3px;
+                    padding: 7px 0px;
+                    transition: 500ms all ease;
+                    font-weight: 700;
+                }
+                
+                #list-edit.form-control{
+                    padding-left: 2px;
+                }
+
+                .update-btn{
+                    position: absolute;
+                    top: 13px;
+                    right:  40px;
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    i{
+                        margin: auto;
+                        transition: all 500ms ease;
+                        color:rgba(0, 0, 0, 0.501);
+                    }
+
+                    &:hover{
+                        .fa-edit{
+                            color: rgba(0, 0, 255, 0.7);
+                        }
+
+                    }
+
+                }
+
+                .save-btn{
+                    @extend .update-btn;
+
+                    &:hover{
+                        .fa-save{
+                            color: rgba(0, 255, 0, 0.7)
+                        }
+                    }
+                }
+        
+                .delete-btn {
+                    @extend .update-btn;
+                    right: 8px;
+
+                    &:hover{
+                        .fa-trash-alt{
+                            color: rgba(255, 0, 0, 0.7);
+                        }
+                    }
+                    
+                }
+
+            }
+
+        }
+        
+        @keyframes strike{
+            0%   { width : 0; }
+            100% { width: 100%; }
+          }
+          .strike {
+            position: relative;
+            color: #777777;
+            font-style: italic;
+            transform: translateX(7px);
+          }
+          .strike::after {
+            content: ' ';
+            position: absolute;
+            top: 52%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: black;
+            animation-name: strike;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; 
+          }
+
+    }
+    
+}

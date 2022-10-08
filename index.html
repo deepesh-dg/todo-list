@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>To Do List in jquery</title>
+    </head>
+    <body>
+
+        <section id="todo-container">
+            <div class="container">
+            <div class="row">
+
+                <div class="col-12 list-container">
+                    <div id="add-list">
+                        <!-- <h2 class="text-center">Website Todo</h2> -->
+                        <div class="title">
+                            <h2 class="text-center text-white">To Do List</h2>
+                        </div>
+
+                        <form id="todo-form" class="form" action="" method="POST">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input class="form-control pl-3" type="text" name="ListItem" placeholder="Write a New Task"/>
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="submit" class="btn btn-success">Add Task</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <ul id="created-list" class="mt-3 m-0" type="none">
+                        <li>
+                            <i id="list-strike" class="fa fa-check-circle" aria-hidden="true"></i><label class="strike">task 1</label><input id="list-edit" type="hidden" class="form-control" value="task 1" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="list-strike" class="fa fa-circle-thin" aria-hidden="true"></i><label>task 2</label><input id="list-edit" type="hidden" class="form-control" value="task 2" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="list-strike" class="fa fa-check-circle" aria-hidden="true"></i><label class="strike">task 3</label><input id="list-edit" type="hidden" class="form-control" value="task 3" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="list-strike" class="fa fa-circle-thin" aria-hidden="true"></i><label>task 4</label><input id="list-edit" type="hidden" class="form-control" value="task 4" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="list-strike" class="fa fa-circle-thin" aria-hidden="true"></i><label>task 5</label><input id="list-edit" type="hidden" class="form-control" value="task 5" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <i id="list-strike" class="fa fa-circle-thin" aria-hidden="true"></i><label>task 6</label><input id="list-edit" type="hidden" class="form-control" value="task 6" />
+                            <div class="update-btn" title="edit">
+                                <i class="fas fa-edit h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="save-btn" title="update" style="display: none;">
+                                <i class="fas fa-save h5" aria-hidden="true"></i>
+                            </div>
+                            <div class="delete-btn" title="delete">
+                                <i class="fas fa-trash-alt h5" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+                
+            </div>
+            </div>
+        </section>
+        
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/font-awesome.js"></script>
+        <script src="js/style.js"></script>
+    </body>
+</html>
